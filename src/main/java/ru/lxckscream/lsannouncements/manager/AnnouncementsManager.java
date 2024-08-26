@@ -18,7 +18,6 @@ public class AnnouncementsManager {
                     if (announcement.getDelay() <= 0) {
                         announcement.execute();
                     } else {
-                        Main.getInstance().getLogger().info("The announcement " + announcement.getName() + " will be executed then " + announcement.getDelay());
                         announcement.setDelay(announcement.getDelay()-1);
                     }
                 }

@@ -30,7 +30,7 @@ public class Announcement {
     public void execute() {
         if (announcementType == AnnouncementType.ALL_PLAYERS) {
             for (Player player : Bukkit.getOnlinePlayers()) {
-                if (!sound.equalsIgnoreCase("null")) player.playSound(player.getLocation(), Sound.valueOf(sound.toUpperCase()), 1, 1);
+                if (!sound.equalsIgnoreCase("null")) player.playSound(player.getLocation(), Sound.valueOf(sound.toUpperCase()), 0, 1);
                 for (String ln : messageLines) {
                     player.sendMessage(ln.replaceAll("<player>", player.getName()));
                 }

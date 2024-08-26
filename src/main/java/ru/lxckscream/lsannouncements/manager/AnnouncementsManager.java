@@ -7,6 +7,7 @@ import ru.lxckscream.lsannouncements.announcement.Announcement;
 import java.util.ArrayList;
 import java.util.List;
 
+//
 public class AnnouncementsManager {
     List<Announcement> announcements = new ArrayList<>();
 

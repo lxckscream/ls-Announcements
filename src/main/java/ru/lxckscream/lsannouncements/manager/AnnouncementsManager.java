@@ -14,9 +14,11 @@ public class AnnouncementsManager {
 
             @Override
             public void run() {
+                for (Announcement announcement : announcements) {
 
+                }
             }
-        }.runTaskTimer(Main.)
+        }.runTaskTimer(Main.getInstance(), 20, 20);
     }
 
     public List<Announcement> getAnnouncements() {

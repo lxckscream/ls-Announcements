@@ -23,7 +23,11 @@ public final class Main extends JavaPlugin {
         // Initialization
         for (String ln : getConfig().getConfigurationSection("announcements").getKeys(false)) {
             AnnouncementType announcementType = AnnouncementType.valueOf(getConfig().getString("announcements." + ln + ".type"));
-            Announcement announcement = new Announcement(getConfig().getString(ln), announcementType, getConfig().getInt("announcements." + ln + ".delay"), color(getConfig().getStringList("announcements." + ln + ".message")));
+            Announcement announcement = new Announcement(ln, announcementType, getConfig().getInt("announcements." + ln + ".delay"), color(getConfig().getStringList("announcements." + ln + ".message")));
+
+            if (getConfig().getString("announcements." + ln + ".sound") == null) announcement.setSound("null");
+            else announcement.setSound(getConfig().getString("announcements." + ln + ".sound").toUpperCase());
+
             if (announcementType == AnnouncementType.ALL_PLAYERS_WITH_PERMISSION) {
                 if (getConfig().getString("announcements." + ln + ".permission") == null) {
                     getLogger().severe("Error with initialize " + ln + "! Please check, set is permission setting?");

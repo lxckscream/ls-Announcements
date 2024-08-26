@@ -4,10 +4,11 @@ import org.bukkit.scheduler.BukkitRunnable;
 import ru.lxckscream.lsannouncements.Main;
 import ru.lxckscream.lsannouncements.announcement.Announcement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnnouncementsManager {
-    List<Announcement> announcements;
+    List<Announcement> announcements = new ArrayList<>();
 
     public AnnouncementsManager() {
         new BukkitRunnable() {

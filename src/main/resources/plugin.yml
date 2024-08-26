@@ -1,0 +1,4 @@
+name: ls-Announcements
+version: '${project.version}'
+main: ru.lxckscream.lsannouncements.Main
+api-version: '1.16'

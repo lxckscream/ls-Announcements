@@ -67,6 +67,22 @@ public class Announcement {
         delay = delayNotSet;
     }
 
+    public int getDelay() {
+        return delay;
+    }
+
+    public int getDelayNotSet() {
+        return delayNotSet;
+    }
+
+    public void setDelay(int delay) {
+        this.delay = delay;
+    }
+
+    public void setDelayNotSet(int delayNotSet) {
+        this.delayNotSet = delayNotSet;
+    }
+
     public void setWorld(List<String> world) {
         this.world = world;
     }

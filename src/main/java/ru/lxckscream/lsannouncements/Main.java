@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.lxckscream.lsannouncements.announcement.Announcement;
 import ru.lxckscream.lsannouncements.announcement.AnnouncementType;
+import ru.lxckscream.lsannouncements.commands.AnnouncementCommand;
 import ru.lxckscream.lsannouncements.manager.AnnouncementsManager;
 
 import static ru.lxckscream.lsannouncements.utils.Hex.color;
@@ -17,6 +18,7 @@ public final class Main extends JavaPlugin {
         instance = this;
         saveDefaultConfig();
         announcementsManager = new AnnouncementsManager();
+        getCommand("announcements").setExecutor(new AnnouncementCommand());
 
         // Initialization
         for (String ln : getConfig().getConfigurationSection("announcements").getKeys(false)) {

@@ -1,0 +1,48 @@
+#
+# The plugin is written by ls-Dev studio
+# We will be very glad if you write your feedback on the plugin page at SpigotMC.org!
+# Thanks for download!
+#
+# This plugin is open source! GitHub repository - https://github.com/lxckscream/ls-Announcements
+#
+# Our socials -
+#  Telegram channel: t.me/lsdeveloping
+#  VKontakte group: vk.com/lsdeveloping
+
+# Helper for configuration:
+# Available announcement types: ALL_PLAYERS, SPECIAL_PLAYERS, ALL_PLAYERS_WITH_PERMISSION, PLAYERS_IN_WORLD
+# Dependency setting for:
+#  ALL_PLAYERS - none dependencies
+#  SPECIAL_PLAYERS - special-players (arraylist)
+#  ALL_PLAYERS_WITH_PERMISSION - permission (string)
+#  PLAYERS_IN_WORLD - world (arraylist)
+#
+# The string setting looks like - name: "your string"
+# The arraylist setting looks like -
+#  name:
+#    - "string1"
+#    - "string2"
+#
+# Placeholders: <player>
+#
+#                                    Enjoy using my plugin!
+
+announcements:
+  announcement-1:
+    type: ALL_PLAYERS
+    delay: 60
+    message:
+      - "&cThis is first line of announcement with number 1!"
+      - "&aThis is second line of announcement with number 1!"
+  announcement-player:
+    type: ALL_PLAYERS
+    delay: 20
+    message:
+      - "&6Hello, &e<player>&6! You are playing on ExampleMc.org!"
+      - "&6Our site: &estore.ExampleMc.org"
+  announcement-hex:
+    type: ALL_PLAYERS
+    delay: 40
+    message:
+      - "&#FDA35Bl&#FDA25As&#FDA15A-&#FDA059A&#FD9F58n&#FD9E58n&#FD9D57o&#FD9C56u&#FD9B56n&#FD9A55c&#FD9954e&#FD9854m&#FE9753e&#FE9653n&#FE9552t&#FE9451s &#FE9250s&#FE914Fu&#FE904Fp&#FE8F4Ep&#FE8E4Do&#FE8D4Dr&#FE8C4Ct&#FE8A4Bi&#FE894Bn&#FE884Ag &#FE8649h&#FE8548e&#FE8447x&#FE8347-&#FE8246c&#FE8145o&#FE8045l&#FF7F44o&#FF7E44r&#FF7D43s&#FF7C42! &#FF7A41(&#FF79401&#FF7840.&#FF773F1&#FF763E6&#FF753E+&#FF743D)"
+      - "&#FD5BE5T&#FB59E6h&#F958E8i&#F856E9s &#F453ECi&#F251EEs &#EF4EF1i&#ED4CF2m&#EB4AF3p&#E949F5o&#E847F6s&#E645F8s&#E444F9i&#E242FBb&#E140FCl&#DF3FFEe&#DD3DFF!"
